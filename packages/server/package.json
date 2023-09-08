@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "The server for Astrosmos.",
   "scripts": {
+    "start": "npm run start:dev",
+    "start:dev": "tsc-watch --build --onSuccess 'node dist/index.js'",
+    "start:prod": "npm run build && node dist/index.js",
+    "build": "tsc --build",
+    "watch": "tsc --build --watch",
+    "clean": "rimraf dist && tsc --build --clean"
   },
   "repository": {
     "type": "git",
@@ -13,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/ewanbrinkman/astrosmos/issues"
   },
-  "homepage": "https://github.com/ewanbrinkman/astrosmos#readme"
+  "homepage": "https://github.com/ewanbrinkman/astrosmos#readme",
+  "dependencies": {
+    "@astrosmos/common": "^1.0.0"
+  },
+  "devDependencies": {
+    "tsc-watch": "^6.0.4"
+  }
 }

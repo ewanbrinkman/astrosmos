@@ -5,6 +5,9 @@
   "main": "dist/index.js",
   "devDependencies": {},
   "scripts": {
+    "build": "tsc --build",
+    "watch": "tsc --build --watch",
+    "clean": "rimraf dist && tsc --build --clean"
   },
   "repository": {
     "type": "git",
