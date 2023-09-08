@@ -1,0 +1,17 @@
+{
+  "name": "@astrosmos/client",
+  "version": "1.0.0",
+  "description": "The client for Astrosmos.",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ewanbrinkman/astrosmos.git"
+  },
+  "author": "Ewan Brinkman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ewanbrinkman/astrosmos/issues"
+  },
+  "homepage": "https://github.com/ewanbrinkman/astrosmos#readme"
+}

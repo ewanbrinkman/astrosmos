@@ -1,0 +1,21 @@
+{
+  "name": "astrosmos",
+  "version": "1.0.0",
+  "description": "A multiplayer PVP game with an authoritative server.",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ewanbrinkman/astrosmos.git"
+  },
+  "author": "Ewan Brinkman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ewanbrinkman/astrosmos/issues"
+  },
+  "homepage": "https://github.com/ewanbrinkman/astrosmos#readme",
+  "workspaces": [
+    "packages/client",
+    "packages/server",
+    "packages/common"
+  ]
+}
