@@ -1,22 +1,22 @@
 {
-  "name": "@astrosmos/common",
-  "version": "1.0.0",
-  "description": "Shared code between the Astrosmos client and server.",
-  "main": "dist/index.js",
-  "devDependencies": {},
-  "scripts": {
-    "build": "tsc --build",
-    "watch": "tsc --build --watch",
-    "clean": "rimraf dist && tsc --build --clean"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ewanbrinkman/astrosmos.git"
-  },
-  "author": "Ewan Brinkman",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ewanbrinkman/astrosmos/issues"
-  },
-  "homepage": "https://github.com/ewanbrinkman/astrosmos#readme"
+    "name": "@astrosmos/common",
+    "version": "1.0.0",
+    "description": "Shared code between the Astrosmos client and server.",
+    "main": "dist/index.js",
+    "devDependencies": {},
+    "scripts": {
+        "build": "tsc --build",
+        "watch": "tsc --build --watch",
+        "clean": "rimraf dist && tsc --build --clean"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ewanbrinkman/astrosmos.git"
+    },
+    "author": "Ewan Brinkman",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ewanbrinkman/astrosmos/issues"
+    },
+    "homepage": "https://github.com/ewanbrinkman/astrosmos#readme"
 }
