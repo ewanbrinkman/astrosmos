@@ -1,0 +1,35 @@
+{
+    "name": "@astrosmos/client",
+    "version": "1.0.0",
+    "description": "The client for Astrosmos.",
+    "scripts": {
+        "start": "npm run start:dev",
+        "start:dev": "webpack-dev-server --config webpack/webpack.config.dev.ts --open",
+        "start:prod": "webpack-dev-server --config webpack/webpack.config.prod.ts --open",
+        "build": "webpack --config webpack/webpack.config.prod.ts",
+        "watch:": "webpack --config webpack/webpack.config.prod.ts --watch",
+        "clean": "rimraf dist"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ewanbrinkman/astrosmos.git"
+    },
+    "author": "Ewan Brinkman",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ewanbrinkman/astrosmos/issues"
+    },
+    "homepage": "https://github.com/ewanbrinkman/astrosmos#readme",
+    "dependencies": {
+        "@astrosmos/common": "^1.0.0"
+    },
+    "devDependencies": {
+        "html-webpack-plugin": "^5.5.3",
+        "ts-loader": "^9.4.4",
+        "ts-node": "^10.9.1",
+        "tsconfig-paths-webpack-plugin": "^4.1.0",
+        "webpack": "^5.88.2",
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "^4.15.1"
+    }
+}

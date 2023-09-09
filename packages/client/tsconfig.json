@@ -1,0 +1,17 @@
+{
+    "extends": "../../tsconfig.base.json",
+    "compilerOptions": {
+        "baseUrl": "./src",
+        "rootDir": "./src",
+        "outDir": "./dist",
+        "declarationDir": "./dist/types",
+        "paths": {}
+    },
+    "include": ["./src"],
+    "exclude": ["./webpack/**/*"],
+    "references": [
+        {
+            "path": "../common"
+        }
+    ]
+}
