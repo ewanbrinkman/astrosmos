@@ -1,0 +1,54 @@
+{
+    "name": "astrosmos",
+    "version": "1.0.0",
+    "description": "A multiplayer PVP game with an authoritative server.",
+    "scripts": {
+        "prepare": "ts-patch install -s",
+        "start": "concurrently 'npm run start:client' 'npm run start:server'",
+        "start:dev": "concurrently 'npm run start:client:dev' 'npm run start:server:dev'",
+        "start:prod": "concurrently 'npm run start:client:prod' 'npm run start:server:prod'",
+        "start:client": "npm run start --workspace=@astrosmos/client",
+        "start:client:dev": "npm run start:dev --workspace=@astrosmos/client",
+        "start:client:prod": "npm run start:prod --workspace=@astrosmos/client",
+        "start:server": "npm run start --workspace=@astrosmos/server",
+        "start:server:dev": "npm run start:dev --workspace=@astrosmos/server",
+        "start:server:prod": "npm run start:prod --workspace=@astrosmos/server",
+        "build": "npm run build --workspaces",
+        "build:client": "npm run build --workspace=@astrosmos/client",
+        "build:common": "npm run build --workspace=@astrosmos/common",
+        "build:server": "npm run build --workspace=@astrosmos/server",
+        "watch": "npm run watch --workspaces",
+        "watch:client": "npm run watch --workspace=@astrosmos/client",
+        "watch:common": "npm run watch --workspace=@astrosmos/common",
+        "watch:server": "npm run watch --workspace=@astrosmos/server",
+        "clean": "npm run clean --workspaces",
+        "clean:client": "npm run clean --workspace=@astrosmos/client",
+        "clean:common": "npm run clean --workspace=@astrosmos/common",
+        "clean:server": "npm run clean --workspace=@astrosmos/server",
+        "format:check": "prettier --list-different './packages/*/**/*.{ts,tsx}' './**/*.json'",
+        "format:fix": "prettier --write './packages/*/**/*.{ts,tsx}' './**/*.json'"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ewanbrinkman/astrosmos.git"
+    },
+    "author": "Ewan Brinkman",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ewanbrinkman/astrosmos/issues"
+    },
+    "homepage": "https://github.com/ewanbrinkman/astrosmos#readme",
+    "workspaces": [
+        "packages/client",
+        "packages/server",
+        "packages/common"
+    ],
+    "devDependencies": {
+        "concurrently": "^8.2.1",
+        "prettier": "^3.0.2",
+        "rimraf": "^5.0.1",
+        "ts-patch": "^3.0.2",
+        "typescript": "^5.2.2",
+        "typescript-transform-paths": "^3.4.6"
+    }
+}
