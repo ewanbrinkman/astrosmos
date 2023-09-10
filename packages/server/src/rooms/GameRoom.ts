@@ -1,8 +1,7 @@
-import 'dotenv/config';
 import { Room, Client } from '@colyseus/core';
 import { InputMessage, PlayerState, GameRoomState } from '@astrosmos/common';
 
-export class GameRoom extends Room<GameRoomState> {
+export default class GameRoom extends Room<GameRoomState> {
     maxClients = 4;
     fixedTimeStep = 1000 / 60;
 
@@ -12,7 +11,7 @@ export class GameRoom extends Room<GameRoomState> {
         this.onMessage('input', (client: Client, input: InputMessage) => {
             const player = this.state.players.get(client.sessionId);
 
-            player.inputQueue.push(input);
+            player!.inputQueue.push(input);
         });
 
         let elapsedTime = 0;
@@ -31,7 +30,7 @@ export class GameRoom extends Room<GameRoomState> {
         const velocity = 2;
 
         this.state.players.forEach((player: PlayerState) => {
-            let input: InputMessage;
+            let input: InputMessage | undefined;
 
             while ((input = player.inputQueue.shift())) {
                 if (input.left) {

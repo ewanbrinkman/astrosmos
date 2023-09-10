@@ -5,7 +5,12 @@
         "rootDir": "./src",
         "outDir": "./dist",
         "declarationDir": "./dist/types",
-        "paths": {}
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "paths": {
+            "@schema/*": ["./schema/*"],
+            "@messages/*": ["./messages/*"]
+        }
     },
     "include": ["./src"]
 }
